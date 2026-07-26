@@ -1,5 +1,6 @@
 ---
 const base = (import.meta.env.BASE_URL + '/').replace('//', '/');
+import heroImage from '../assets/671526211_26787759250859594_7138457267796217672_n.jpg';
 ---
 
 <section id="about" class="bg-white py-24">
@@ -43,7 +44,7 @@ const base = (import.meta.env.BASE_URL + '/').replace('//', '/');
       <!-- Right: Truck image -->
       <div class="overflow-hidden rounded-2xl bg-gray-100">
         <img
-          src={`${base}images/about-truck.png`}
+          src={heroImage.src}
           alt="TOSS trucking fleet"
           class="h-full w-full object-cover"
           loading="lazy"

@@ -6,7 +6,7 @@ const base = (import.meta.env.BASE_URL + '/').replace('//', '/');
   <!-- Background image from logitydispatch -->
   <div class="absolute inset-0">
     <img src={`${base}images/form-bg.webp`} alt="" class="h-full w-full object-cover" aria-hidden="true" />
-    <div class="absolute inset-0 bg-gray-900/70"></div>
+    <div class="absolute inset-0 bg-linear-to-r from-orange-700/85 via-orange-600/70 to-orange-900/85"></div>
   </div>
 
   <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -14,11 +14,11 @@ const base = (import.meta.env.BASE_URL + '/').replace('//', '/');
 
       <!-- Left: copy -->
       <div>
-        <p class="mb-2 text-sm font-semibold uppercase tracking-widest text-orange-400">Get Started</p>
+        <p class="mb-2 text-sm font-semibold uppercase tracking-widest text-orange-400">Start Your Free Setup</p>
         <h2 class="mb-4 text-4xl font-black text-white sm:text-5xl">Get a free setup</h2>
-        <p class="mb-3 text-lg font-semibold text-white">How to get started</p>
+        <p class="mb-3 text-lg font-semibold text-white">Fill out the form below, and one of our specialists will contact you shortly.</p>
         <p class="mb-8 text-base leading-relaxed text-gray-300">
-          Contact us for a free setup. Our job is to provide the best loads in the market for every driver — all you need to do is drive. No paperwork, no broker calls, no empty miles.
+          For immediate assistance, give us a call. Trucking One Stop Shop matches drivers from any region with high-quality, best-paying loads while you keep rolling.
         </p>
         <ul class="space-y-3">
           {[
@@ -38,33 +38,66 @@ const base = (import.meta.env.BASE_URL + '/').replace('//', '/');
 
       <!-- Right: form -->
       <div>
-        <div class="rounded-2xl bg-white p-8 shadow-2xl">
-          <h3 class="mb-5 text-xl font-black text-gray-900">Free setup</h3>
-          <form class="space-y-4" action="mailto:info@truckingonestopshop.net" method="POST">
-            <div>
-              <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">Your name</label>
-              <input type="text" name="name" placeholder="Your name" required
-                class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20" />
+        <div class="rounded-2xl bg-white/95 p-8 shadow-2xl shadow-orange-900/20 ring-1 ring-white/10 backdrop-blur-xl">
+          <h3 class="mb-5 text-xl font-black text-gray-900">Start Your Free Setup</h3>
+          <form class="grid gap-4" action="mailto:info@truckingonestopshop.net" method="POST">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">Full Name *</label>
+                <input type="text" name="name" placeholder="Jhon Doe" required
+                  class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20" />
+              </div>
+              <div>
+                <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">Company Name *</label>
+                <input type="text" name="company" placeholder="ABC Trucking" required
+                  class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20" />
+              </div>
+            </div>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">Email Address *</label>
+                <input type="email" name="email" placeholder="Jhon@abctrucking.com" required
+                  class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20" />
+              </div>
+              <div>
+                <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">Phone Number</label>
+                <input type="tel" name="phone" placeholder="+1 (555) 123-4567"
+                  class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20" />
+              </div>
+            </div>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">Trucks Type *</label>
+                <select name="truckType" required
+                  class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20">
+                  <option value="">Select type of truck</option>
+                  <option>Dry Van</option>
+                  <option>Reefer</option>
+                  <option>Flatbed</option>
+                  <option>Hotshot</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">MC / DOT *</label>
+                <input type="text" name="mcDot" placeholder="enter your MC/DOT" required
+                  class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20" />
+              </div>
             </div>
             <div>
-              <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">Your email</label>
-              <input type="email" name="email" placeholder="Your email" required
-                class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20" />
-            </div>
-            <div>
-              <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">Your phone</label>
-              <input type="tel" name="phone" placeholder="Your phone" required
-                class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20" />
+              <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">How did you hear about us? (Optional)</label>
+              <input type="text" name="referral" placeholder="Google, Referral, Social media, etc..."
+                class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20" />
             </div>
             <div class="flex items-start gap-3">
               <input type="checkbox" id="consent2" name="consent" required class="mt-0.5 h-4 w-4 shrink-0 accent-orange-500 rounded" />
               <label for="consent2" class="text-xs leading-relaxed text-gray-500">
-                I agree to receive emails and SMS marketing messages from Trucking One Stop Shop. Message rates may apply.
+                By checking this box, you agree to receive SMS messages from TRUCKING ONE STOP SHOP related to Service updates and operational notifications, Appointment or onboarding reminders, Account-related notifications, Customer support communications, Administrative or informational messages related to trucking and dispatch services. You may reply STOP to opt-out at any time. Reply to HELP to +1 (305) 901-1818 for assistance. Messages and data rates may apply.
               </label>
             </div>
             <button type="submit"
               class="w-full rounded-lg bg-orange-500 px-6 py-4 text-sm font-bold text-white transition-all hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-200">
-              Get a free setup →
+              Send request →
             </button>
           </form>
         </div>

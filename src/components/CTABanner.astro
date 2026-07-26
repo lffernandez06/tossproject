@@ -1,5 +1,6 @@
 ---
 const base = (import.meta.env.BASE_URL + '/').replace('//', '/');
+import Screenshot from '../assets/Screenshot2026-07-26162225.png';
 ---
 
 <section class="bg-white py-24">
@@ -46,7 +47,7 @@ const base = (import.meta.env.BASE_URL + '/').replace('//', '/');
       <!-- Right: Truck illustration -->
       <div class="flex items-center justify-center">
         <img
-          src={`${base}images/cta-truck.png`}
+          src={Screenshot.src}
           alt="Trucking One Stop Shop dispatch"
           class="w-full max-w-lg object-contain"
           loading="lazy"

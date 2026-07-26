@@ -1,42 +1,28 @@
 ---
 const base = (import.meta.env.BASE_URL + '/').replace('//', '/');
+import heroImage from '../assets/671526211_26787759250859594_7138457267796217672_n.jpg';
 ---
 
 <section class="relative min-h-screen overflow-hidden bg-white pt-20">
 
-  <!-- ─── RIGHT: frame shape + video (absolute, right half) ─── -->
-  <div class="absolute inset-y-0 right-0 hidden w-[52%] overflow-hidden lg:block">
-    <!-- Curved frame shape as background of the right panel -->
-    <img
-      src={`${base}images/hero-frame.svg`}
-      alt=""
-      aria-hidden="true"
-      class="absolute inset-0 h-full w-full"
-      style="object-fit: fill;"
-    />
-    <!-- Truck video: autoplay, muted, loop — matches logitydispatch.com hero -->
-    <video
-      src={`${base}videos/hero-truck.mp4`}
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="auto"
-      class="relative h-full w-full object-cover"
-    ></video>
-  </div>
+  <div class="absolute inset-y-50 right-0 hidden w-[52%] overflow-hidden lg:block">
+  <img
+    src={`${base}images/hero-frame.svg`}
+    alt=""
+    aria-hidden="true"
+    class="absolute inset-0 h-full w-full"
+    style="object-fit: fill;"
+  />
 
+  <img
+    src={heroImage.src}
+    alt="Trucks in formation"
+    class="absolute inset-0 h-full w-full object-cover"
+  />
+</div>
   <!-- Mobile: video as full-width block above content -->
-  <div class="relative aspect-video w-full overflow-hidden lg:hidden">
-    <video
-      src={`${base}videos/hero-truck.mp4`}
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="auto"
-      class="h-full w-full object-cover"
-    ></video>
+  <div class="relative w-full overflow-hidden lg:hidden">
+    <img src="https://stockcake.com/i/trucks-in-formation_1993516_1310044.jpg" alt="Italian Trulli">
   </div>
 
   <!-- ─── Content layer ─── -->
