@@ -20,11 +20,7 @@ import heroImage from '../assets/671526211_26787759250859594_7138457267796217672
     class="absolute inset-0 h-full w-full object-cover"
   />
 </div>
-  <!-- Mobile: video as full-width block above content -->
-  <div class="relative w-full overflow-hidden lg:hidden">
-    <img src="https://stockcake.com/i/trucks-in-formation_1993516_1310044.jpg" alt="Italian Trulli">
-  </div>
-
+<!-- Mobile: same local image --> <div class="relative w-full overflow-hidden lg:hidden"> <img src={heroImage.src} alt="Trucks in formation" class="w-full h-auto object-cover" /> </div>
   <!-- ─── Content layer ─── -->
   <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="grid min-h-[calc(100vh-80px)] items-center py-12 lg:grid-cols-2 lg:py-20">
